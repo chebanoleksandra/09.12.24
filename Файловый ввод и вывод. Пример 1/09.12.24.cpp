@@ -14,10 +14,10 @@ int main()
 
 	ifstream read("MyFile.txt");
 	char buff[10];
-	while (read.eof() != 0)
+	while (!read.eof())
 	{
 		read >> buff;
-		cout << buff;
+		cout << buff << " ";
 	}
 	read.close();
 }
