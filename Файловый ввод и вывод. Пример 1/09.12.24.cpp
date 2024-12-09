@@ -13,5 +13,11 @@ int main()
 	write.close();
 
 	ifstream read("MyFile.txt");
-
+	char buff[10];
+	while (read.eof() != 0)
+	{
+		read >> buff;
+		cout << buff;
+	}
+	read.close();
 }
